@@ -46,7 +46,7 @@ Sometimes composer failed or give directory error. Try `composer dump-autoload`
 
 ####Create the model with migration and controller 
 
-`php artisan make:model Task -m -c`
+`php artisan make:model Task -mc`
 The important thing is if model Task table name Tasks (create_table_tasks), if model Post teble is Posts (create_table_posts),
 
 
