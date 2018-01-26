@@ -16,7 +16,8 @@ Route::get('/', function () {
 `php artisan`
  
 
-** Tinker (Laravel Shell)**
+
+**Tinker (Laravel Shell)**
 You can run with this command `php artisan tinker` . Then you can write commands.
 
 For example if you have task table:
@@ -30,5 +31,41 @@ App\Task::where('id','>','2');
 // get the just body column for all
 App\Task::pluck('body')
 ```
+ 
+**Reset the migration**
+`php artisan migrate:reset`
 
+**Composer autoload**
+Sometimes composer failed or give directory error. Try `composer dump-autoload`
+
+
+**Create the model with migration and controller**
+`php artisan make:model Task -m -c`
+The important thing is if model Task table name Tasks (create_table_tasks), if model Post teble is Posts (create_table_posts),
+
+
+**Sometimes in model better to use regular scope**
+Without scope inside model:
+```
+...
+    public static function incomplete () {
+        return static::where('completed', 0)->get();
+    }
+...
+```
+now we can get incompleted rows but we can not make more where query or cant use other functions more. When we use scopes like:
+
+```
+public function scopeIncomplete() { 
+  return static::where('completed',0);
+}
+
+``` 
+
+now we can use 
+
+```
+ModelName::Incomplete()->where('id' , '>', 3)->get();
+
+```
 
