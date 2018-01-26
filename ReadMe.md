@@ -103,7 +103,43 @@ public function show(Task $task) {
 ```
 
 #### How layouts are work
-Lets try to explain with two example 
+Lets try to explain with examples and standarts
+
+First its better to use layouts under views/layouts folder. And for example we have posts layouts
+```
+ views/layouts
+    /footer.blade.php
+    /header.blade.php
+    /master.blade.php <-- Main blade layout
+ views/posts
+    /index.blade.php
+```
+
+```
+// Location: views/layouts/master.blade.php
+
+@include(layouts.header)
+
+<div>
+    @yield(content)
+<div>
+
+@include(layouts.footer)
+```
+
+```
+// Location: views/posts/index.blade.php
+
+@extends(layouts.master)
+
+    @section(content)
+        My Post
+    @endsection
+
+@include(layouts.footer)
+```
+
+
 
 
 
