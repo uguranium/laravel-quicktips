@@ -1,6 +1,6 @@
 # Laravel Quicktips
 
-Return array values if value and passed data name is same its possible to use `compact` function.
+**Return array values if value and passed data name is same its possible to use `compact` function.**
 
 ```
 Route::get('/', function () {
@@ -9,3 +9,9 @@ Route::get('/', function () {
     return viev('home',compact('name','age'));
 })
 ```
+
+
+**Look the artisan commands**
+
+`php artisan`
+
