@@ -17,7 +17,7 @@ Route::get('/', function () {
  
 
 
-####Tinker (Laravel Shell)
+#### Tinker (Laravel Shell)
 
 You can run with this command `php artisan tinker` . Then you can write commands.
 
@@ -33,7 +33,7 @@ App\Task::where('id','>','2');
 App\Task::pluck('body')
 ```
  
-####Reset the migration 
+#### Reset the migration 
 
 `php artisan migrate:reset`
 
@@ -75,7 +75,7 @@ ModelName::Incomplete()->where('id' , '>', 3)->get();
 
 ```
 
-#### Controller quickly model using
+####Controller quickly model using
 we have show function under controller like this:
 
 ```
@@ -100,6 +100,9 @@ public function show(Task $task) {
 }
 ...
 ```
+
+####How layouts are work
+Lets try to explain with two example 
 
 
 
