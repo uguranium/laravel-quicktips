@@ -15,9 +15,20 @@ Route::get('/', function () {
 
 `php artisan`
  
+
 ** Tinker (Laravel Shell)**
 You can run with this command `php artisan tinker` . Then you can write commands.
+
 For example if you have task table:
 ```
+// get the all tasks
 App\Task::all()
+
+// get the id grater than 2
+App\Task::where('id','>','2');
+
+// get the just body column for all
+App\Task::pluck('body')
 ```
+
+
