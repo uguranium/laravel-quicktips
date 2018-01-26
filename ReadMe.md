@@ -17,7 +17,8 @@ Route::get('/', function () {
  
 
 
-**Tinker (Laravel Shell)**
+####Tinker (Laravel Shell)
+
 You can run with this command `php artisan tinker` . Then you can write commands.
 
 For example if you have task table:
@@ -32,19 +33,24 @@ App\Task::where('id','>','2');
 App\Task::pluck('body')
 ```
  
-**Reset the migration**
+####Reset the migration 
+
 `php artisan migrate:reset`
 
-**Composer autoload**
+
+
+####Composer autoload 
+
 Sometimes composer failed or give directory error. Try `composer dump-autoload`
 
 
-**Create the model with migration and controller**
+####Create the model with migration and controller 
+
 `php artisan make:model Task -m -c`
 The important thing is if model Task table name Tasks (create_table_tasks), if model Post teble is Posts (create_table_posts),
 
 
-**Sometimes in model better to use regular scope**
+####Sometimes in model better to use regular scope 
 Without scope inside model:
 ```
 ...
@@ -68,4 +74,38 @@ now we can use
 ModelName::Incomplete()->where('id' , '>', 3)->get();
 
 ```
+
+#### Controller quickly model using
+we have show function under controller like this:
+
+```
+...
+// Id is come from route and we are under TaskController
+
+public function show($id) {
+    $task = Task::find($id);
+    return $task;
+}
+...
+```
+
+But also we can use like 
+
+```
+...
+// Its inportant to task variable same as route name (like tasks/{$task})
+
+public function show(Task $task) {
+    return $task
+}
+...
+```
+
+
+
+
+
+
+
+
 
