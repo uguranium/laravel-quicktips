@@ -33,13 +33,14 @@ App\Task::where('id','>','2');
 App\Task::pluck('body')
 ```
  
+ 
 #### Reset the migration 
 
 `php artisan migrate:reset`
 
 
 
-####Composer autoload 
+#### Composer autoload 
 
 Sometimes composer failed or give directory error. Try `composer dump-autoload`
 
