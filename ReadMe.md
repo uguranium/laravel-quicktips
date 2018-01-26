@@ -14,4 +14,10 @@ Route::get('/', function () {
 **Look the artisan commands**
 
 `php artisan`
-
+ 
+** Tinker (Laravel Shell)**
+You can run with this command `php artisan tinker` . Then you can write commands.
+For example if you have task table:
+```
+App\Task::all()
+```
