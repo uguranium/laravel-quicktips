@@ -139,6 +139,16 @@ First its better to use layouts under views/layouts folder. And for example we h
 @include(layouts.footer)
 ```
 
+#### Saving the requested data
+You dont need to use a lot of lines also just use in controller
+
+```
+// I'm under posts controller.
+
+Post::create(request()->all());
+
+```
+
 
 
 
