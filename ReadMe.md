@@ -150,7 +150,16 @@ Post::create(request()->all());
 ```
 
 
+#### Working with Scss, Js, Css
+Create your files under resources then use
 
+```
+npm run dev
+```
+If you want to see changes live use
+```
+npm run watch
+```
 
 
 
