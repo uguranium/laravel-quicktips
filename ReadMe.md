@@ -181,6 +181,20 @@ public function __construct () {
 } 
 ```
 
+#### Delete and install all tables
+```
+php artisan migrate:refresh
+```
+
+#### Validate
+Laravel is have validate function under controller method you can use like this example.
+```
+$this->validate(request(),[
+    'name' => 'required',
+    'email' => 'required|email',
+    'password' => 'required'
+]);
+```
 
 
 
