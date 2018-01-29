@@ -171,13 +171,13 @@ under your controller, construct function if you need auth middleware just for s
 
 ```
 public function __construct () {
-    $this->middleware('auth', ['only' => 'delete'])
+    $this->middleware('auth')->only(['index']);
 } 
 
 // or if you want just except one function
 
 public function __construct () {
-    $this->middleware('auth', ['except' => 'index'])
+    $this->middleware('auth')->except(['index']);
 } 
 ```
 
