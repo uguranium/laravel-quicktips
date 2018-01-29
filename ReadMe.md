@@ -161,6 +161,26 @@ If you want to see changes live use
 npm run watch
 ```
 
+#### Auth Middleware
+For install authenticating 
+```
+php artisan make:auth
+```
+
+under your controller, construct function if you need auth middleware just for special function you can use
+
+```
+public function __construct () {
+    $this->middleware('auth', ['only' => 'delete'])
+} 
+
+// or if you want just except one function
+
+public function __construct () {
+    $this->middleware('auth', ['except' => 'index'])
+} 
+```
+
 
 
 
