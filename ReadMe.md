@@ -196,6 +196,16 @@ $this->validate(request(),[
 ]);
 ```
 
+#### Create user example
+
+```
+// Create user
+$user = User::create(request(['name', 'email', 'password']))
+
+// If you want login
+auth()->login($user);
+```
+
 
 
 
